@@ -10,12 +10,41 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 
 Jekyll also offers powerful support for code snippets:
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+{% highlight javascript linenos %}
+
+(function() {
+
+  "use strict";
+
+  // Modules
+  let request = require('request');
+
+  // Guardian API
+  let guardianUrl = 'http://content.guardianapis.com/search?',
+      apiKey = '&format=json&api-key=42414072-3f79-4bf0-9c17-9137bc278bfd';
+
+  let requestString = guardianUrl.concat(apiKey);
+
+
+
+  function fetchTest (callback) {
+
+    request(requestString, function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+          callback(body );
+      }
+    });
+  }
+
+  module.exports = {
+    // Public methods
+    test: function () { console.log('Test successful'); },
+    fetchTest: fetchTest
+  };
+
+
+})();
+
 {% endhighlight %}
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
