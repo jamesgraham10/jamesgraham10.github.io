@@ -1,0 +1,30 @@
+---
+layout: page
+title: projects
+---
+
+<div class="posts">
+  {% for post in site.categories.project %}
+  <div class="post">
+    <h1 class="post-title">
+        {{ post.title }}
+
+    </h1>
+    {% if post.images.menu %}
+      <img class="post__menu-image" src="{{ site.baseurl }}/public/images/posts/{{post.date | date: "%Y-%m-%d"}}-{{ post.images_path }}/{{ post.images.menu }}" alt="Image for {{ post.title }}">
+    {% endif %}
+    <p class="post__summary">{{ post.summary }}</p>
+
+    {% if post.has_writeup %}
+    <a href="{{ site.baseurl }}{{ post.url }}">
+      <button>Read more</button>
+    </a>
+    {% endif %}
+    <a class="project__button" href="{{post.forward_link}}" target="_blank">
+        {{ post.forward_link_text }}
+    </a>
+
+
+  </div>
+  {% endfor %}
+</div>

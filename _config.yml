@@ -1,19 +1,14 @@
 # Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           pretty
 
 # Setup
-title:               James Graham
-tagline:             Front End Developer
-url:                 http://jamesgraham10.github.io
-paginate:            1
-baseurl:             ""
-
-# Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          _sass
-  style:            :compressed
+title:               'James Graham'
+tagline:             'Junior Web Developer'
+description:         "Hello. I make web apps with JavaScript, using nice frameworks and libraries like Node, Express, Angular and React. I also love doing CSS!"
+url:                 http://lanyon.getpoole.com
+baseurl:             ''
 
 # About/contact
 author:
@@ -22,11 +17,4 @@ author:
   email:             mail@jamesgraham.io
 
 # Custom vars
-version:             2.0.0
-github:
-  repo:              https://github.com/poole/poole
-
-# Gems
-gems:
-  - jekyll-paginate
-  - jekyll-gist
+version:             1.0.0

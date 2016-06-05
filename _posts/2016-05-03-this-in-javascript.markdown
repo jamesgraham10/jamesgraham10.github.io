@@ -1,8 +1,12 @@
 ---
 layout: post
-title:  "JavaScript: what is \"this\"?"
+title:  "What Is \"This\"?"
+images_path: 'javascript_what_is_this'
 date:   2016-05-04 09:00:00 +0100
-categories: javascript
+category: blog
+summary: "A closer look at JavaScript\'s \"this\" keyword in different execution contexts"
+images:
+  menu: 'menu.png'
 ---
 
 I found the `this` concept really confusing at first. But it isn't so hard really. Just weird. So lets simplify it. Basically `this` is an object reference which is created by the JavaScript engine whenever a function or method in your code gets invoked. In general `this` will refer to the parent object of the calling function or method. But there are edge cases where the JavaScript engine does something completely different. So it's puzzling at times. Lets look at some examples of `this` in action, so we can see what it does in different contexts.
@@ -184,3 +188,5 @@ Cool! That covers most things. So just try and remember these important things:
 - If those methods have nested functions, `this` will refer to the `window` object.
 
 Getting the knack of `this` in JavaScript is really a case of seeing what happens to it in different contexts, so I encourage you to play around with the code and try things out for yourself.
+
+[View the Github Gist](https://gist.github.com/jamesgraham10/d6d9d4da7a4826155f503309592e8762){:class="gist__link"}
