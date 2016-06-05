@@ -1,13 +1,13 @@
 ---
 layout: page
-title: cv
+title: CV
 ---
 {% include cv-notification.html %}
 * * *
 
 ## Greetings!
 
-I’m currently looking for my first job in the web industry. As someone that believes technology can be a positive thing, I want to work for an organisation whose foremost aim is to improve the lives of other people.
+I’m currently looking for my first job in the web industry. As someone that believes technology can be a force for good, I want to work for an organisation whose foremost aim is to improve the lives of other people.
 
 ## About Me
 
@@ -21,7 +21,7 @@ Learning to code was easily the hardest but most satisfying thing I've ever done
 
 ## Since Then
 
-I have made several client-side MVC [projects](../projects) with Angular, have upped my game with SASS and front-end tooling in general, and I can create simple servers in Node and Express. I "released" an actual thing on the [Chrome Store](https://chrome.google.com/webstore/detail/sherpa-todo-app/jjdodbkpmnamcpgifckblnicicabmhag) earlier in February.
+I have made several client-side MVC [projects](../projects) with Angular, have upped my game with Sass and front-end tooling in general, and I can create simple servers in Node and Express. I "released" an actual app on the [Chrome Store](https://chrome.google.com/webstore/detail/sherpa-todo-app/jjdodbkpmnamcpgifckblnicicabmhag) earlier in February.
 
 {% include post-image.html url="../public/images/cv/sherpa.png" description="Sherpa - Chrome Store App." %}
 

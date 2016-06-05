@@ -6,7 +6,7 @@ permalink:           pretty
 # Setup
 title:               'James Graham'
 tagline:             'Junior Web Developer'
-description:         "Hello. I make web apps with JavaScript, using nice frameworks and libraries like Node, Express, Angular and React. I also love doing CSS!"
+description:         "Hello. I make web apps with JavaScript, using nice frameworks and libraries like Node, Express and Angular. I also love doing CSS!"
 url:                 http://lanyon.getpoole.com
 baseurl:             ''
 
