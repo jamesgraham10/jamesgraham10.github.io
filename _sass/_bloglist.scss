@@ -1,0 +1,33 @@
+.blog-list-main__overlay {
+  height: 200px;
+  min-height: 100%;
+}
+
+.blog-list {
+  margin: 5em auto;
+  max-width: 800px;
+}
+
+.blog-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-date {
+  color: $purple;
+  min-width: 200px;
+  text-align: center;
+}
+
+.item-tag {
+  background: $green;
+
+}
+
+@media (min-width: $tablet) {
+  .blog-list {
+    width: 80%;
+
+  }
+}

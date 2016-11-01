@@ -3,7 +3,8 @@ layout: post
 title:  "Cycling to France"
 images_path: 'cycling_to_france'
 date:   2015-10-23 09:00:00 +0100
-category: creative_writing
+tags: ['adventure']
+category: blog
 summary: 'A snippet of our journey cycling from Bournemouth to France'
 images:
   menu: 'menu.jpg'

@@ -6,12 +6,10 @@ header {
   justify-content: space-between;
 }
 
-ul {
-  li {
-    display: inline-block;
+nav ul li {
+  display: inline-block;
     span {
       color: #6956FF;
       margin: .5em;
     }
-  }
 }

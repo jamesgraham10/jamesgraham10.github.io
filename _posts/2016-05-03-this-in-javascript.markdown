@@ -14,13 +14,13 @@ I found the `this` concept really confusing at first. But it isn't so hard reall
 
 Take *this* very simple example:
 
-{% highlight javascript %}
+```javascript
   console.log(this); // logs window
-{% endhighlight %}
+```
 
 Our line of code is invoked in the global scope. Our call to `console.log` logs the `window` object. That seems to make sense. Lets see what happens when we start nesting stuff:
 
-{% highlight javascript %}
+```javascript
 
   function whatIsThis () {
     console.log(this); // logs window
@@ -29,8 +29,7 @@ Our line of code is invoked in the global scope. Our call to `console.log` logs 
     }();
   }
   whatIsThis();
-
-{% endhighlight %}
+```
 
 We know that functions create their own scope, so we might think that `this` will now refer to the function that called it. Nope. Our `console.log` calls still log the `window` object. Why? Well if we think about it, calling our global `whatIsThis` function is the same as writing `window.whatIsThis`. So `this` is the `window` object because it is the parent to our function.
 
@@ -38,7 +37,7 @@ We know that functions create their own scope, so we might think that `this` wil
 
 Lets see what happens with an object literal:
 
-{% highlight javascript %}
+```javascript
   var Bike = {
     type: 'touring',
     gears: 21,
@@ -54,13 +53,13 @@ Lets see what happens with an object literal:
   };
   Bike.whatAmI();
   Bike.methods.whatAmI();
-{% endhighlight %}
+```
 
 In our `Bike.whatAmI()` call, because our method in invoked directly from our Bike object, `this` gets set to the Bike object. In our `Bike.methods.whatAmI()` call, `this` is set to our otherwise empty `Bike.methods` object. That makes sense. In both cases, `this` refers to the parent object.
 
 That's super useful, as we can have methods which refer to the properties of it's own object like so:
 
-{% highlight javascript %}
+```javascript
   var Bike = {
     type: 'touring',
     gears: 21,
@@ -70,12 +69,12 @@ That's super useful, as we can have methods which refer to the properties of it'
     }
   };
   Bike.sayType(); // logs 'I'm a touring bike.'
-{% endhighlight %}
+```
 
 
 Now it's time for something more interesting. Lets nest a function in our Bike's first `whatAmI` method:
 
-{% highlight javascript %}
+```javascript
   var Bike = {
     type: 'touring',
     gears: 21,
@@ -88,13 +87,13 @@ Now it's time for something more interesting. Lets nest a function in our Bike's
     }
   };
   Bike.whatAmI();
-{% endhighlight %}
+```
 
 What's going on here? We have a function nested in our method which logs the `window` object. That doesn't seem to make much sense. Surely it would log the `Bike` object again? Yup it's weird. Many people consider this feature of JavaScript to be a bug. So you should just remember that any functions nested within methods will set `this` to the `window` object.
 
 But there is a nice work around:
 
-{% highlight javascript %}
+```javascript
   var Bike = {
     type: 'touring',
     gears: 21,
@@ -107,13 +106,13 @@ But there is a nice work around:
     }
   };
   Bike.whatAmI();
-{% endhighlight %}
+```
 
 Nice. Now we can nest functions inside of methods and still get a reference to the object we want to work with. This is really useful when we're using functions inside our methods that need to refer to the main object.
 
 Like this:
 
-{% highlight javascript %}
+```javascript
 var Bike = {
       type: 'touring',
       countriesVisited: ['France', 'Germany', 'Turkey', 'Iran', 'India'],
@@ -132,11 +131,11 @@ var Bike = {
     // 'I've been to Turkey.'
     // 'I've been to Iran.'
     // 'I've been to India.'
-{% endhighlight %}
+```
 
 That said, using a combination of `that` and `this` gets a little strange to read, so it's good practise to use `that` (or the equally commonly `self`) in all instances, even when `this` can be used.
 
-{% highlight javascript %}
+```javascript
 var Bike = {
       // vars & methods...
       repeatCountriesVisited: function () {
@@ -149,11 +148,11 @@ var Bike = {
       }
     };
     Bike.sayCountriesVisited();
-{% endhighlight %}
+```
 
 Everything we have covered so far is applicable when we're using constructor functions and setting methods on the prototype as well:
 
-{% highlight javascript %}
+```javascript
 var Bike = function (type, countriesVisited, oldNews) {
   this.type = type;
   this.countriesVisited = countriesVisited;
@@ -179,7 +178,7 @@ dawesGalaxy.repeatCountriesVisited();
 // logs:
 // 'I've been to Mongolia.'
 // 'I've been to Pakistan.'
-{% endhighlight %}
+```
 
 
 Cool! That covers most things. So just try and remember these important things:
@@ -190,4 +189,4 @@ Cool! That covers most things. So just try and remember these important things:
 
 Getting the knack of `this` in JavaScript is really a case of seeing what happens to it in different contexts, so I encourage you to play around with the code and try things out for yourself.
 
-[View the Github Gist](https://gist.github.com/jamesgraham10/d6d9d4da7a4826155f503309592e8762){:class="gist__link"}
+[View the Github Gist](https://gist.github.com/jamesgraham10/d6d9d4da7a4826155f503309592e8762){:class="purple"}

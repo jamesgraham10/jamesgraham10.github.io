@@ -2,48 +2,60 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+* { box-sizing: border-box; }
+
 @import "variables";
+@import "code";
 @import "animations";
 @import "state";
 @import "media";
 @import "labels";
 
-* {
-  font-family: 'Rubik';
-  box-sizing: border-box;
-}
+
 
 h1, h2, h3, h4, h5, h6, p, li, span, i, small {
+  font-family: 'Rubik';
   color: $black;
+}
+
+code, pre {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  span {
+    font-family: Menlo, Monaco, "Courier New", monospace;
+  }
 }
 
 body {
   margin: 0;
   min-height: 100vh;
   display: flex;
-  justify-content: space-between;
+  //justify-content: space-between;
   flex-direction: column;
 }
 
 .container {
-  padding: 1em;
+  flex: 1;
+  padding: 0 1em;
 }
 
-
-// Includes
+// Atoms
 @import "blocks";
-@import "header";
 @import "logo";
+
+// Partials
+@import "header";
 @import "footer";
 
 
-.intro {
-  max-width: 600px;
+// Pages
+@import "post";
+@import "bloglist";
 
-}
+.intro { max-width: 600px; }
 
 .green { color: $green; }
 .purple { color: $purple; }
-.purple-overlay { background: rgba(104,86,255,0.70); }
+.purple-overlay {
+  background: rgba(104,86,255,0.70);}
 
 .b--green { border-color: $green; }
