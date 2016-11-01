@@ -4,20 +4,21 @@
 
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
-  <div class="sidebar-background">
-    <div class="sidebar-item">
-      <a href="{{site.baseurl }}/" title="Home"><img class="sidebar-image" src="{{ site.baseurl }}/public/images/logo.png" alt="Site Logo"></a>
+  <div class="sidebar__inner">
+
+    <div>
+      <a href="{{site.baseurl }}/" title="Home"><img class="logo" src="{{ site.baseurl }}/public/images/logo.png" alt="Site Logo"></a>
       <p>{{ site.description }}</p>
     </div>
 
-    <nav class="sidebar-nav">
+    <nav>
       <a class="sidebar-nav-item" href="{{ site.baseurl }}/">Blog</a>
       <a class="sidebar-nav-item" href="{{ site.baseurl }}/projects">Projects</a>
       <a class="sidebar-nav-item" href="{{ site.baseurl }}/writing">Other Writing</a>
       <a class="sidebar-nav-item" href="{{ site.baseurl }}/public/media/james-graham-CV.pdf">CV</a>
     </nav>
 
-    <div class="sidebar-item sidebar-item--footer">
+    <div class="sidebar__footer">
       <div class="social-links">
        <a href="https://github.com/jamesgraham10" title="Github">{% include social-svg/github.svg %}</a>
        <a href="https://codepen.io/jamesgraham10" title="Codepen">{% include social-svg/codepen.svg %}</a>

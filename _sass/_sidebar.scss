@@ -1,0 +1,47 @@
+/* Navigation */
+.sidebar-toggle {
+  border-radius: 0;
+}
+.sidebar-nav-item {
+  border-top: none;
+  color: #fff;
+}
+
+/* Sidebar */
+.sidebar {
+  color: #224f54;
+  background-image: url('../images/wave.png');
+  &__inner {
+    background:  linear-gradient(135deg, rgba(138,222,231,0.80) 0%, rgba(138,230,215,0.84) 100%);
+    height: 100%;
+    display: flex;
+    padding: 1em;
+    flex-direction: column;
+  }
+}
+
+.logo {
+  -webkit-filter: opacity(90%);
+  max-height: 100px;
+  border-radius: 50%;
+}
+
+.sidebar__footer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.social-links svg {
+  fill: #224f54;
+  margin: 0 6px 4px 6px;
+  max-width: 24px;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:hover {
+    fill: #122b2d;
+    transition: all .15s linear;
+  }
+}

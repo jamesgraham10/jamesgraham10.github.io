@@ -13,7 +13,7 @@ title: Writing
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
     {% if post.images.menu %}
-      <img class="post__menu-image" src="{{ site.baseurl }}/public/images/posts/{{ post.date | date: "%Y-%m-%d" }}-{{ post.images_path }}/{{ post.images.menu }}" alt="Image for {{ post.title }}">
+      <img src="{{ site.baseurl }}/public/images/posts/{{ post.date | date: "%Y-%m-%d" }}-{{ post.images_path }}/{{ post.images.menu }}" alt="Image for {{ post.title }}">
     {% endif %}
     {{ post.summary }}
   </div>

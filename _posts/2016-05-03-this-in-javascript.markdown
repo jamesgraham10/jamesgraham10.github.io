@@ -29,7 +29,7 @@ Our line of code is invoked in the global scope. Our call to `console.log` logs 
   }
   whatIsThis();
 
-{% endhighlight %}  
+{% endhighlight %}
 
 We know that functions create their own scope, so we might think that `this` will now refer to the function that called it. Nope. Our `console.log` calls still log the `window` object. Why? Well if we think about it, calling our global `whatIsThis` function is the same as writing `window.whatIsThis`. So `this` is the `window` object because it is the parent to our function.
 
