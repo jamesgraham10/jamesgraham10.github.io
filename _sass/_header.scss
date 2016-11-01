@@ -1,0 +1,17 @@
+header {
+  padding: 0 1em;
+  height: 4.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  li {
+    display: inline-block;
+    span {
+      color: #6956FF;
+      margin: .5em;
+    }
+  }
+}

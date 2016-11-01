@@ -1,8 +1,0 @@
-/**
- * Blur content when sidebar opens
- * Refer to sidebar.js for implementation details
- **/
-.content-blur {
-  -webkit-filter: opacity(10%);
-  transition: all .25s ease-in-out;
-}

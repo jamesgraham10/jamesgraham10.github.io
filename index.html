@@ -3,20 +3,35 @@ layout: default
 title: Home
 ---
 
-<div class="posts">
-  {% for post in site.categories.blog %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+{% include intro.html %}
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-    {% if post.images.menu %}
-      <img class="post__menu-image" src="{{ site.baseurl }}/public/images/posts/{{ post.date | date: "%Y-%m-%d" }}-{{ post.images_path }}/{{ post.images.menu }}" alt="Image for {{ post.title }}">
-    {% endif %}
-    {{ post.summary }}
+<div class="block">
+  <span class="sideways-label">blog stream</span>
+
+  {% for post in site.categories.blog limit:1  %}
+  <div class="main-block cover" style="background-image: url('{{ site.baseurl }}/public/images/posts/{{ post.date | date: "%Y-%m-%d" }}/bg.jpg')">
+    <div class="main-block__overlay purple-overlay pa3 pa4-ns">
+      <h1 class="f2 f1-ns green ma0 mw7-ns"><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h1>
+      <div class="main-block__footer">
+        <span>{{post.date | date: "%-d %B %Y" }}</span>
+        {% for tag in post.tags limit:1 %}
+          <span>{{tag}}</span>
+        {% endfor %}
+      </div>
+    </div>
   </div>
   {% endfor %}
+
+  <div class="secondary-block-cntr">
+    {% for post in site.categories.blog limit:2 offset:1 %}
+      <div class="secondary-block b--green ba bw2 pa3 pa4-ns">
+        <h2 class="ma0 green"><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h2>
+        <span class="purple">{{post.date | date: "%-d %B %Y" }}</span>
+        {% for tag in post.tags limit:1 %}
+          <span class="sideways-tag">{{tag}}</span>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+
 </div>

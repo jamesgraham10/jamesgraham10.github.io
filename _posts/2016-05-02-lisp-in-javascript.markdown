@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "What Is \"This\"?"
+title:  "Lisp in Javascript"
 images_path: 'javascript_what_is_this'
 date:   2016-05-04 09:00:00 +0100
+tags: ['lisp']
 category: blog
-tags: ['javascript']
 summary: "A closer look at JavaScript\'s \"this\" keyword in different execution contexts"
 images:
   menu: 'menu.png'

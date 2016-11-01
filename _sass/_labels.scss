@@ -1,0 +1,33 @@
+.sideways-label {
+  transform-origin: bottom left;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+  color: $purple;
+  position: absolute;
+  left: 0px;
+  z-index: 100;
+  top: 28vh;
+  font-size: 1.25rem;
+  padding-bottom: .25rem;
+  visibility: hidden;
+}
+
+
+@media(min-width: 1000px) {
+  .sideways-label {
+    visibility: visible;
+  }
+
+}
+
+.sideways-tag {
+  transform-origin: top right;
+  background: $green;
+  transform: rotate(-90deg);
+  color: $purple;
+  position: absolute;
+  padding: .15em 1.5em;
+  top: 20px;
+  right: .5rem;
+  z-index: 100;
+  font-size: 1rem;}
