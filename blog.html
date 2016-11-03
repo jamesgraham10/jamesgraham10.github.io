@@ -2,15 +2,15 @@
 layout: default
 title: Blog
 ---
-<div class="blog-list">
+<div class="mw800px center pt4 pt5-ns">
   {% for post in site.categories.blog limit:1  %}
-  <div class="main-block cover" style="background-image: url('{{ site.baseurl }}/public/images/posts/{{ post.date | date: "%Y-%m-%d" }}/bg.jpg')">
-    <div class="main-block__overlay blog-list-main__overlay purple-overlay pa3 pa4-ns">
-      <h1 class="f3 f2-m f1-ns green ma0 mb3 fw5 mw7-ns"><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h1>
-      <div class="main-block__footer">
-        <span>{{post.date | date: "%-d %B %Y" }}</span>
+  <div class="cover" style="background-image: url('{{ site.baseurl }}/public/images/posts/{{ post.date | date: "%Y-%m-%d" }}/bg.jpg')">
+    <div class="purple-overlay pa3 pa4-ns">
+      <h1 class="f3 f2-m f1-ns green ma0 mb6 fw5 mw7-ns"><a class="link--internal" href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h1>
+      <div class="flex-between">
+        <span class="white">{{post.date | date: "%-d %B %Y" }}</span>
         {% for tag in post.tags limit:1 %}
-          <span>{{tag}}</span>
+          <span class="white">{{tag}}</span>
         {% endfor %}
       </div>
     </div>
@@ -18,11 +18,11 @@ title: Blog
   {% endfor %}
 
   {% for post in site.categories.blog offset:1 %}
-  <div class="blog-list-item b--green ba bw2 mv3">
-    <h2 class="ma3 green fw5 f5 f4-ns"><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h2>
+  <div class="flex-between align b--green ba bw2 mv3">
+    <h2 class="ma3 green fw5 f5 f4-ns"><a class="link--internal" href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h2>
     <div>
-      <span class="item-date f6 ph3">{{post.date | date: "%-d %B %Y" }}</span>
-      {% for tag in post.tags limit:1 %} <span class="item-tag pv1 ph3 mh3 f6 purple dn di-l">{{tag}}</span> {% endfor %}
+      <span class="tc purple f6 ph3">{{post.date | date: "%-d %B %Y" }}</span>
+      {% for tag in post.tags limit:1 %} <span class="bg--green purple pv1 ph3 mh3 f6 dn di-l">{{tag}}</span> {% endfor %}
     </div>
 
   </div>

@@ -1,4 +1,5 @@
 header {
+  margin: .75em 0;
   padding: 0 1em;
   height: 4.5em;
   display: flex;
@@ -6,10 +7,16 @@ header {
   justify-content: space-between;
 }
 
-nav ul li {
+ul span {
+  color: $purple;
+}
+
+.nav-item {
   display: inline-block;
-    span {
-      color: #6956FF;
-      margin: .5em;
-    }
+  margin: .5em;
+  border-bottom: solid 3px transparent;
+  &--active { border-bottom: solid 3px $green; }
+  &:hover, &:active {
+    border-bottom: solid 3px $green;
+  }
 }

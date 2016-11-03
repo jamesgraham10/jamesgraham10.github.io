@@ -1,21 +1,8 @@
-.social-icons {
-  i {
-    font-size: 1.25rem;
-    margin: 0 .1em;
-    &:hover, &:active {
-      cursor: pointer;
-      color: $purple;
-      transition: color 100ms linear;
-    }
-  }
+.footer-link {
+  margin: 0 .25em;
 }
 
-
-footer {
-  text-align: center;
-
-  small {
-    font-size: .6rem;
-    color: #cccccc;
-  }
+.smallprint {
+  font-size: .6rem;
+  color: #cccccc;
 }

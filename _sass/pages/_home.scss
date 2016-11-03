@@ -1,0 +1,28 @@
+.blog-preview {
+  max-width: $desktop;
+  margin: 2em auto;
+  position: relative;
+}
+
+.secondary-block {
+  min-width: 300px;
+  min-height: 200px;
+  margin: 2em 0;
+  position: relative;
+}
+
+@media (min-width: $tablet) {
+  .blog-preview {
+    flex-direction: row;
+  }
+  .secondary-block {
+    margin: 0;
+    height: 25vh;
+    &:first-child {
+      margin-bottom: 1em;
+    }
+  }
+  .secondary-block-cntr {
+    margin-left: 1em;
+  }
+}

@@ -1,8 +1,40 @@
-/* Code */
-code,
-pre {
-  font-family: Menlo, Monaco, "Courier New", monospace;
+h1, h2, h3, h4, h5, h6, p, li, span, i, small {
+  font-family: 'Rubik';
+  color: $black;
 }
+
+li {
+  list-style: square;
+}
+
+p, li {
+  line-height: 1.6;
+}
+
+span, i, a {
+  color: inherit;
+}
+
+@media (min-width: $tablet) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* Font Awesome */
+.fa {
+  &-md { font-size: 1.25rem; }
+  &-lg { font-size: 1.75rem; }
+}
+
+/* Code ~ taken from Poole theme  */
+code, pre {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  span {
+    font-family: Menlo, Monaco, "Courier New", monospace;
+  }
+}
+
 code {
   padding: .25em .5em;
   font-size: 85%;

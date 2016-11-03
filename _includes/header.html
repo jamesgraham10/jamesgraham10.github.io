@@ -1,13 +1,48 @@
-<header>
+<header >
+
+  {% assign current = page.url | downcase | split: '/' %}
 
   <div class="logo">
-    <h1><a class="no-hover-state" href="{{site.baseurl}}/" class="no-hover-state">JG</a></h1>
+    <h1><a href="{{site.baseurl}}/" class="no-hover-state">JG</a></h1>
   </div>
-  <nav>
+  <nav class="mr2">
     <ul>
-      <li><a href="{{site.baseurl}}/blog">Blog</a> <span>&middot;</span></li>
-      <li><a href="{{site.baseurl}}/projects">Projects</a> <span>&middot;</span></li>
-      <li><a href="{{site.baseurl}}/about">About</a> </li>
+      <li
+        {% if current[1] == 'blog' %}
+          class="nav-item nav-item--active"
+        {% else %}
+          class="nav-item"
+        {% endif %}>
+        <a href="{{site.baseurl}}/blog">
+          Blog
+        </a>
+      </li>
+
+      <span>&middot;</span>
+
+      <li
+        {% if current[1] == 'projects' %}
+          class="nav-item nav-item--active"
+        {% else %}
+          class="nav-item"
+        {% endif %}>
+        <a href="{{site.baseurl}}/projects">
+          Projects
+        </a>
+      </li>
+
+      <span>&middot;</span>
+
+      <li
+        {% if current[1] == 'about' %}
+         class="nav-item nav-item--active"
+        {% else %}
+         class="nav-item"
+        {% endif %}>
+        <a href="{{site.baseurl}}/about">
+         About
+        </a>
+      </li>
     </ul>
   </nav>
 

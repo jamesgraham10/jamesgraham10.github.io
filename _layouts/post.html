@@ -2,16 +2,13 @@
 layout: default
 ---
 
-<div>
-  <div class="post-header" style="background-image: url('{{ site.baseurl }}/public/images/posts/{{ page.date | date: "%Y-%m-%d" }}/bg.jpg')">
-    <div class="post-header__overlay purple-overlay pa2">
-      <h1 class="tc ma0 center f3 f2-ns green">{{ page.title }}</h1>
-      <p class="white">{{ page.date | date: "%-d %B %Y" }}</p>
-    </div>
-
-  </div>
-  <div class="post-content">
-    {{ content }}
+<div class="post-header" style="background-image: url('{{ site.baseurl }}/public/images/posts/{{ page.date | date: "%Y-%m-%d" }}/bg.jpg')">
+  <div class="flex-col-center h-100 tc purple-overlay pa2">
+    <h1 class="tc ma0 center f3 f2-ns green">{{ page.title }}</h1>
+    <p class="white">{{ page.date | date: "%-d %B %Y" }}</p>
   </div>
 
+</div>
+<div class="contain-copy center">
+  {{ content }}
 </div>

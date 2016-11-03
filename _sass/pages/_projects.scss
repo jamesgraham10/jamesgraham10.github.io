@@ -1,0 +1,17 @@
+.project-list {
+  margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+}
+
+@media (min-width: $tablet) {
+  .project-list__item {
+    width: 50%;
+    &:nth-child(odd) { padding-right: .5em; }
+    &:nth-child(even) { padding-left: .5em; }
+  }
+}

@@ -1,4 +1,4 @@
-.sideways-label {
+.page-tag {
   transform-origin: bottom left;
   text-transform: uppercase;
   transform: rotate(-90deg);
@@ -12,22 +12,22 @@
   visibility: hidden;
 }
 
-
-@media(min-width: 1000px) {
-  .sideways-label {
-    visibility: visible;
+.post-tag {
+  color: $purple;
+  background: $green;
+  &--sideways {
+    transform-origin: top right;
+    transform: rotate(-90deg);
+    position: absolute;
+    padding: .15em 1.5em;
+    top: 20px;
+    right: .5rem;
+    z-index: 100;
   }
-
 }
 
-.sideways-tag {
-  transform-origin: top right;
-  background: $green;
-  transform: rotate(-90deg);
-  color: $purple;
-  position: absolute;
-  padding: .15em 1.5em;
-  top: 20px;
-  right: .5rem;
-  z-index: 100;
-  font-size: 1rem;}
+@media(min-width: 1000px) {
+  .page-tag {
+    visibility: visible;
+  }
+}
