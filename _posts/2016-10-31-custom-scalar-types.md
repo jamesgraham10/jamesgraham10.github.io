@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Creating Custom Scalar Types with GraphQL"
+title:  "Custom Scalar Types with GraphQL"
 date:   2016-10-31 09:00:00 +0100
 tags: ['javascript']
 background: 'hi'
