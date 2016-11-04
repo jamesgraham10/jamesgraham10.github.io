@@ -1,0 +1,24 @@
+<div class="post-footer">
+  <div class="contain-copy center">
+
+    <!-- Author Profile -->
+    <div class="post-footer__profile flex align">
+      <img class="avatar mr3" src="https://s.gravatar.com/avatar/cbdd9cac3b99ff37b4511011b91906cd?s=200" alt="">
+      <div>
+        <h3 class="ma0 mv1">James Graham</h3>
+        <p class="ma0 mb2">I'm a full-stack developer who loves to write JavaScript & CSS and share what I know on this blog. Currently I'm most excited about <i>ES6</i>, <i>Flexbox</i> and <i>Functional CSS</i>.</p>
+      </div>
+    </div>
+
+    <hr class="hr hr--thin hr--gradient">
+    <h3 class="mb0">Comments</h3>
+
+    <!-- Disqus Comment Thread -->
+    {% if page.comments %}
+      <div id="disqus_thread" class="post-footer__disqus"></div>
+      {% include disqus.html %}
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    {% endif %}
+
+  </div>
+</div>
