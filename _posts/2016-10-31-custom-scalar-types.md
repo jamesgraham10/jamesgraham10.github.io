@@ -21,14 +21,6 @@ const {
   GraphQLError
 } = require('graphql');
 
-
-function isMoment (iso) { return moment(iso).isValid(); };
-
-function validateDateString(iso) {
-  if (isMoment(iso) ) { return iso }
-  else { throw new GraphQLError(`${iso} is not a valid date`); }
-}
-
 module.exports = new GraphQLScalarType({
   name: 'MomentDate',
 
@@ -42,6 +34,15 @@ module.exports = new GraphQLScalarType({
   parseValue: value => validateDateString(value)
 
 });
+
+function isMoment (iso) { return moment(iso).isValid(); };
+
+function validateDateString(iso) {
+  if (isMoment(iso) ) { return iso }
+  else {
+    throw new GraphQLError(`${iso} is not a valid date`);
+  }
+}
 
 ```
 
@@ -60,14 +61,18 @@ Now that our scalar type is defined, we can then use it like any other:
 
 ```javascript
 
-const { GraphQLCustomScalarDate } = require('../customScalars');
+const {
+  GraphQLCustomScalarDate
+} = require('../customScalars');
 
 // For a mutation
 const EditClassInputType = new GraphQLInputObjectType({
   name: 'ClassEditInput',
-  fields: () => {
+  fields:
     return {
-      classDate: { type: new GraphQLNonNull(GraphQLCustomScalarDate) }
+      classDate: {
+        type: new GraphQLNonNull(GraphQLCustomScalarDate)
+      }
       // other fields...
     };
   }
@@ -78,7 +83,9 @@ const ClassType = new GraphQLObjectType({
   name: 'Class',
   fields:
     return {
-      classDate: { type: GraphQLCustomScalarDate }
+      classDate: {
+        type: GraphQLCustomScalarDate
+      }
       // other fields...
     };
   }
