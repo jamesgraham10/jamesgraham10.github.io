@@ -9,3 +9,39 @@
     position: center center;
   }
 }
+
+.post {
+  margin: 0 auto;
+  p, code, pre, h1, h2, h3, h4, h5, h6 {
+    max-width: 700px;
+    margin: 1em auto;
+  }
+
+}
+
+.codepen-block {
+  margin: 5em 0 5em -1em;
+  padding: 5em 0;
+  width: 100vw;
+  background: #ececec;
+  min-height: 50vh;
+  h2 {
+    color: $purple;
+    margin: 0 auto .5em auto;
+    font-weight: 500;
+    max-width: 1440px;
+    padding: 0 1rem;
+  }
+}
+
+.codepen-cntr {
+  box-sizing: border-box;
+  max-width: 1440px;
+  padding: 0 1em;
+  margin: 0 auto;
+  height: 100%;
+  div {
+    display: flex;
+    border: solid 4px $purple;
+  }
+}
