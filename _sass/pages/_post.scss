@@ -27,9 +27,8 @@
   margin-left: -1em;
   width: 100vw;
   height: 100%;
-  padding: 2em 0;
   &__profile {
-    padding: 2em 0;
+    padding: 1em 0;
   }
   &__disqus {
     padding: 1em;
@@ -67,14 +66,14 @@
 
 .avatar {
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
   max-width: 100%;
 }
-
-@media (min-width: $tablet) {
-  .avatar {
-    height: 100px;
-    width: 100px;
-  }
-}
+//
+// @media (min-width: $tablet) {
+//   .avatar {
+//     height: 100px;
+//     width: 100px;
+//   }
+// }
