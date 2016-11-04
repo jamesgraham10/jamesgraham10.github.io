@@ -3,8 +3,10 @@ layout: post
 title:  "Lets make rolling text!"
 date:   2016-11-04 12:00:00 +0100
 overlayColor: "0, 157, 255, 0.25"
+comments: true
 tags: ['css']
 category: blog
+disqus_identifier: '20161104'
 ---
 
 ## What We'll Be Building

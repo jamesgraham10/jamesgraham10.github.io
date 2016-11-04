@@ -6,6 +6,8 @@ tags: ['javascript']
 background: 'hi'
 category: blog
 summary: "How to create custom scalar types with GraphQL"
+comments: true
+disqus_identifier: '20161031'
 ---
 
 GraphQL already comes with a number of useful scalar types like `GraphQLFloat`, `GraphQLString`, `GraphQLInt`, `GraphQLList` and so on. But if your using GraphQL for mutations, or your api is fetching data from somewhere else which you need to validate against, creating a custom scalar type starts to make sense.

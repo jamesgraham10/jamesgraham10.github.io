@@ -6,8 +6,8 @@ date:   2016-05-04 09:00:00 +0100
 category: blog
 tags: ['javascript']
 summary: "A closer look at JavaScript\'s \"this\" keyword in different execution contexts"
-images:
-  menu: 'menu.png'
+comments: true
+disqus_identifier: '20160503'
 ---
 
 I found the `this` concept really confusing at first. But it isn't so hard really. Just weird. So lets simplify it. Basically `this` is an object reference which is created by the JavaScript engine whenever a function or method in your code gets invoked. In general `this` will refer to the parent object of the calling function or method. But there are edge cases where the JavaScript engine does something completely different. So it's puzzling at times. Lets look at some examples of `this` in action, so we can see what it does in different contexts.

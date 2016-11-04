@@ -21,6 +21,19 @@ span, i, a {
   }
 }
 
+.hr {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background: $purple;
+  &--gradient {
+    background-image: linear-gradient(to right, white 0%, #d1d1d1 10%, #b5b5b5 50%, #d1d1d1 90%, white 100%);
+  }
+  &--thin {
+    height: 1px;
+  }
+}
+
 /* Font Awesome */
 .fa {
   &-md { font-size: 1.25rem; }

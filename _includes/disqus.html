@@ -1,0 +1,18 @@
+<script>
+
+  var disqus_identifier = 'http://www.jamesgraham.io/{{ page.url }}';
+  var identifier = '{{ page.disqus_identifier }}';
+
+  var disqus_config = function () {
+    this.page.url = disqus_identifier;
+    this.page.identifier = identifier;
+  };
+
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = '//jamesgraham.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+
+</script>
